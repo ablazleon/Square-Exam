@@ -151,8 +151,8 @@ class FunctionView: UIView {
     func drawSquare() {
         
         let squarePath = UIBezierPath()
-        let startX = Double(center.x) - side/2
-        let startY = Double(center.y) - side/2
+        let startX = Double(xmax/2) - side/2
+        let startY = Double(ymax/2) - side/2
         squarePath.move(to: CGPoint(x: startX, y: startY))
         
         // squarePath.addLine(to: squarePath.currentPoint)
