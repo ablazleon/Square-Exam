@@ -46,7 +46,8 @@ class FunctionView: UIView {
     var textY: String = "y"
     
     @IBInspectable
-    lazy var side: Double = Double(min(xmax, ymax))
+    lazy var side: Double = (0.9)*Double(min(xmax, ymax))
+    // So it can be seen in all the window
     
     // It is created an atribute, so to use the functions that matchees.
 //    weak var dataSource: FunctionViewDataSource!
