@@ -58,11 +58,11 @@
 			children = (
 				3AF04CCE2161F2E400B7BB2B /* AppDelegate.swift */,
 				3AF04CD02161F2E400B7BB2B /* ViewController.swift */,
+				3AF04CE02161F69A00B7BB2B /* FunctionView.swift */,
 				3AF04CD22161F2E400B7BB2B /* Main.storyboard */,
 				3AF04CD52161F2E400B7BB2B /* Assets.xcassets */,
 				3AF04CD72161F2E400B7BB2B /* LaunchScreen.storyboard */,
 				3AF04CDA2161F2E400B7BB2B /* Info.plist */,
-				3AF04CE02161F69A00B7BB2B /* FunctionView.swift */,
 			);
 			path = "Square Exam";
 			sourceTree = "<group>";

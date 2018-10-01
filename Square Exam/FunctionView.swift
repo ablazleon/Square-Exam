@@ -45,6 +45,9 @@ class FunctionView: UIView {
     @IBInspectable
     var textY: String = "y"
     
+    @IBInspectable
+    lazy var side: Double = Double(min(xmax, ymax))
+    
     // It is created an atribute, so to use the functions that matchees.
 //    weak var dataSource: FunctionViewDataSource!
     
@@ -56,8 +59,9 @@ class FunctionView: UIView {
     override func draw(_ rect: CGRect) {
         // Drawing code
         drawAxis()
-
+        drawSquare()
         drawTicks()
+        drawText()
     }
     /** Draw the axis in the UIView
      */
@@ -142,6 +146,25 @@ class FunctionView: UIView {
         asY.draw(at: posY)
         
     }
+    
+    /** Draw Square */
+    func drawSquare() {
+        
+        let squarePath = UIBezierPath()
+        let startX = Double(center.x) - side/2
+        let startY = Double(center.y) - side/2
+        squarePath.move(to: CGPoint(x: startX, y: startY))
+        
+        // squarePath.addLine(to: squarePath.currentPoint)
+        squarePath.addLine(to: CGPoint(x: startX + side, y: startY))
+        squarePath.addLine(to: CGPoint(x: startX + side, y: startY + side))
+        squarePath.addLine(to: CGPoint(x: startX, y: startY + side))
+        squarePath.close()
+        color.set()
+        squarePath.stroke()
+        
+    }
+    
     
     // It must be translated the coordinates found by the CubeModel to teh UIView: just centering in the point (xmax/2, ymax/2)
     private func centerX(_ x: Double) -> Double {
